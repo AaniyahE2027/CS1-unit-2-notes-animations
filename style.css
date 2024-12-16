@@ -23,3 +23,44 @@
 #translate{
     transform: translate(10px, 30px);
 }
+
+/* Step #1: Define the animation sequence*/
+@keyframes colorchangesmooth{
+    0% {background-color:aqua;}
+    50%{background-color: hotpink;}
+    100%{ background-color: aqua;}
+}
+
+/* Step #2: Configure animation on an element*/
+#animated-box{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    animation-name: colorchangesmooth;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+
+
+@keyframes spin {
+    0%{
+        transform:rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg) scale(2);
+    }
+}
+
+#animated-emoji{
+    animation-name: spin;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+
+
+    font-size:40px;
+    display:inline-block;
+}
